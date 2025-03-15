@@ -1,0 +1,10 @@
+streamlit==1.32.0
+pandas==2.0.3
+numpy==1.24.4
+plotly==5.16.1
+pillow==10.0.0
+streamlit-authenticator==0.3.1
+extra-streamlit-components==1.2.0
+PyYAML==6.0.1
+bcrypt==4.0.1
+requests==2.31.0 

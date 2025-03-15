@@ -1,0 +1,24 @@
+cookie:
+  expiry_days: 30
+  key: analise_dados_auth
+  name: analise_dados_cookie
+credentials:
+  usernames:
+    admin:
+      email: admin@example.com
+      name: Administrador
+      password: $2b$12$P0hZB1wCQW9xVnTRdAi.K.kgO2lS0.wdSzfBrjG6DZrp3QI8ubtW6
+      role: admin
+    usuario:
+      email: usuario@example.com
+      name: "Usu\xC3\xA1rio Padr\xC3\xA3o"
+      password: $2b$12$wvr8Ih0vPgbMzFy9hM3.3O4zFMEJk4dDu2kP3R2hKmSHSaEAo7V9q
+      role: user
+    wanderson:
+      email: wanderson.m1@outlook.com
+      name: "Wanderson Magalh\xE3es"
+      password: $2b$12$GiDbZ.RBkqRz3YoiHr9Y4.cJRud/G7PHnfHwD8KvYiTI27.oqqfam
+      role: user
+preauthorized:
+  emails:
+  - novo@example.com
