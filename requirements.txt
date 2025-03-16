@@ -7,4 +7,3 @@ streamlit-authenticator==0.4.2
 extra-streamlit-components==0.1.71
 PyYAML==6.0.2
 bcrypt==4.3.0
-requests==2.32.3

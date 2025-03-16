@@ -26,23 +26,9 @@ def main():
             user_name = st.session_state.user_info['name']
             user_role = st.session_state.user_info['role']
             
-            # Verifica se o usuário foi autenticado via OAuth e tem uma imagem de perfil
-            if 'picture' in st.session_state.user_info and st.session_state.user_info['picture']:
-                st.image(st.session_state.user_info['picture'], width=100)
-            
             # Exibir informações do usuário
             st.markdown(f"### Olá, {user_name}!")
             st.write(f"Perfil: **{user_role}**")
-            
-            # Exibir origem da autenticação
-            if 'auth_source' in st.session_state and st.session_state.auth_source:
-                auth_sources = {
-                    'traditional': 'Login Tradicional',
-                    'google': 'Google',
-                    'facebook': 'Facebook'
-                }
-                auth_source = auth_sources.get(st.session_state.auth_source, 'Desconhecido')
-                st.write(f"Login via: **{auth_source}**")
             
             # Menu de navegação
             st.subheader("Menu Principal")

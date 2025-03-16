@@ -4,6 +4,11 @@ cookie:
   name: analise_dados_cookie
 credentials:
   usernames:
+    Wanderson762:
+      email: wanderson.m1@outlook.com
+      name: "Wanderson Magalh\xE3es"
+      password: $2b$12$fBuL5dFztdcYVnfObOTYgufh.PZqtL2MRXwYLTNAXSWPC/8L46qEG
+      role: user
     admin:
       email: admin@example.com
       name: Administrador
@@ -20,5 +25,5 @@ credentials:
       password: $2b$12$GiDbZ.RBkqRz3YoiHr9Y4.cJRud/G7PHnfHwD8KvYiTI27.oqqfam
       role: user
 preauthorized:
-  emails:
+  emails: null
   wanderson.m1@outlook.com: admin
