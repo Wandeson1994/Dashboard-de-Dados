@@ -21,4 +21,4 @@ credentials:
       role: user
 preauthorized:
   emails:
-  - novo@example.com
+  wanderson.m1@outlook.com: admin
