@@ -21,7 +21,7 @@ def main():
         st.title("📊 Analítica Visual")
         
         # Informações do usuário
-        if st.session_state.logged_in:
+        if st.session_state.logged_in and st.session_state.user_info is not None:
             # Obter nome do usuário e papel
             user_name = st.session_state.user_info['name']
             user_role = st.session_state.user_info['role']

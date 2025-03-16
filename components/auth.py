@@ -34,7 +34,7 @@ def login_form():
     """Renderiza o formulário de login com opções de autenticação."""
     initialize_session()
     
-    if st.session_state.logged_in:
+    if st.session_state.logged_in and st.session_state.user_info is not None:
         return True
     
     st.title("Acesso ao Sistema")
@@ -72,8 +72,12 @@ def login_form():
                 st.rerun()
             elif authentication_status is False:
                 st.error("Usuário ou senha incorretos")
+                st.session_state.logged_in = False
+                st.session_state.user_info = None
             elif authentication_status is None:
                 st.info("Por favor, insira suas credenciais")
+                st.session_state.logged_in = False
+                st.session_state.user_info = None
     
     # 2. Formulário de cadastro
     with tab2:
@@ -135,17 +139,17 @@ def login_form():
 
 def logout():
     """Realiza o logout do usuário."""
+    for key in ['logged_in', 'username', 'user_info', 'auth_source', 'authentication_status', 'name']:
+        if key in st.session_state:
+            st.session_state[key] = None
     st.session_state.logged_in = False
-    st.session_state.username = None
-    st.session_state.user_info = None
-    st.session_state.auth_source = None
     st.rerun()
 
 def login_required(func):
     """Decorador para garantir que o usuário esteja logado."""
     def wrapper(*args, **kwargs):
         initialize_session()
-        if not st.session_state.logged_in:
+        if not st.session_state.logged_in or st.session_state.user_info is None:
             if not login_form():
                 return
         return func(*args, **kwargs)
